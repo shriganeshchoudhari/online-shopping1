@@ -20,19 +20,19 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class HibernateConfig {
 
 	// Change the below based on the DBMS you choose
-	private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/onlineshopping";
+	/*private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/onlineshopping";
 	private final static String DATABASE_DRIVER = "org.h2.Driver";
 	private final static String DATABASE_DIALECT = "org.hibernate.dialect.H2Dialect";
 	private final static String DATABASE_USERNAME = "sa";
 	private final static String DATABASE_PASSWORD = "";
+	*/
 	
 	
-	
-/*	private final static String DATABASE_URL = "jdbc:mysql://172.30.53.195:3306/onlineshopping";
+	private final static String DATABASE_URL = "jdbc:mysql://localhost:3306/onlineshopping";
 	private final static String DATABASE_DRIVER = "com.mysql.jdbc.Driver";
 	private final static String DATABASE_DIALECT = "org.hibernate.dialect.MySQLDialect";
 	private final static String DATABASE_USERNAME = "root";
-	private final static String DATABASE_PASSWORD = "root";*/
+	private final static String DATABASE_PASSWORD = "root";
 	// dataSource bean will be available
 	@Bean("dataSource")
 	public DataSource getDataSource() {
@@ -76,7 +76,7 @@ public class HibernateConfig {
 		properties.put("hibernate.show_sql", "true");
 		properties.put("hibernate.format_sql", "true");
 		
-		//properties.put("hibernate.hbm2ddl.auto", "create");
+	properties.put("hibernate.hbm2ddl.auto", "update");
 		
 		
 		return properties;
