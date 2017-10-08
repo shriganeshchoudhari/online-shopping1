@@ -28,7 +28,7 @@ public class HibernateConfig {
 	*/
 	
 	
-	private final static String DATABASE_URL = "jdbc:mysql://localhost:3306/onlineshopping";
+	private final static String DATABASE_URL = "jdbc:mysql://mysql:3306/onlineshopping";
 	private final static String DATABASE_DRIVER = "com.mysql.jdbc.Driver";
 	private final static String DATABASE_DIALECT = "org.hibernate.dialect.MySQLDialect";
 	private final static String DATABASE_USERNAME = "root";
